@@ -1,0 +1,2 @@
+(this["webpackJsonpwarehouse-tracker-frontend"]=this["webpackJsonpwarehouse-tracker-frontend"]||[]).push([[0],{11:function(e,n,t){"use strict";t.r(n);var r=t(1),c=t.n(r),o=t(3),s=t.n(o),a=(t(8),t(9),t(0));var i=function(){return Object(a.jsx)("div",{className:"App",children:"Hello world"})};s.a.render(Object(a.jsx)(c.a.StrictMode,{children:Object(a.jsx)(i,{})}),document.getElementById("root"))},8:function(e,n,t){},9:function(e,n,t){}},[[11,1,2]]]);
+//# sourceMappingURL=main.0d440c8e.chunk.js.map
