@@ -5,6 +5,11 @@ export const logIn = (user) => ({
   user,
 })
 
+export const displayError = (error) => ({
+  type: 'ERROR',
+  error,
+})
+
 export const createUser = (username, password) => (dispatch) => {
   fetch(`${API}users`, {
     method: 'post',
@@ -12,6 +17,9 @@ export const createUser = (username, password) => (dispatch) => {
     headers: { 'Content-type': 'application/json; charset=UTF-8' },
   }).then((res) => res.json())
     .then((response) => {
+      if (response.error) {
+        dispatch(displayError(response.error));
+      }
       if (response.username) {
         dispatch(logIn(response.username))
       }
@@ -27,6 +35,9 @@ export const fetchUser = (username, password) => (dispatch) => {
     headers: { 'Content-type': 'application/json; charset=UTF-8' },
   }).then((res) => res.json())
     .then((response) => {
+      if (response.error) {
+        dispatch(displayError(response.error));
+      }
       if (response.username) {
         dispatch(logIn(response.username))
       }

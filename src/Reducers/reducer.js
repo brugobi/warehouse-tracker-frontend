@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 
-const user = {};
+const user = '';
+const error = '';
 
 function userReducer(state = user, action) {
   switch (action.type) {
@@ -11,8 +12,18 @@ function userReducer(state = user, action) {
   }
 }
 
+function errorReducer(state = error, action) {
+  switch (action.type) {
+    case 'ERROR':
+      return action.error;
+    default:
+      return state;
+  }
+}
+
 const reducers = {
   userReducer,
+  errorReducer,
 };
 
 const appReducer = combineReducers(reducers);
