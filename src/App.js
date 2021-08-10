@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { createUser } from './Actions';
 import './App.css';
-import Signup from './auth/Signup';
+import { useDispatch } from 'react-redux';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => { dispatch(createUser('try99', '123456')) }, []);
   return (
     <div className="App">
-      <Signup />
+      testing
     </div>
   );
 }
