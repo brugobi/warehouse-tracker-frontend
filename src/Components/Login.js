@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { fetchUser } from '../Actions';
 import { useDispatch } from 'react-redux';
 
-function Login() {
+function Login({ error } ) {
   const dispatch = useDispatch();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState(0);
@@ -31,8 +32,13 @@ function Login() {
       >Password:<input onChange={e => handleChange(e)} type='password' name='password' required />
       </label>
       <button onClick={e => handleSubmit(e)}>Login</button>
+      <h2>{ error }</h2>
     </div>
   );
 }
 
-export default Login;
+const mapStateToProps = (state) => ({
+  error: state.errorReducer
+});
+
+export default connect(mapStateToProps, null)(Login);

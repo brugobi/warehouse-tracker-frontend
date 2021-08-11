@@ -24,6 +24,7 @@ function Signup() {
 
   return (
     <div>
+      <h1>Signup</h1>
       <label
       >Username:<input onChange={e => handleChange(e)} type='name' name='username' required />
       </label>
