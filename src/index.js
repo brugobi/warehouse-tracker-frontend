@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import 'bulma/css/bulma.min.css';
-import store from './Reducers/index';
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Router>
     <App />
-  </Provider>,
+  </Router>,
   document.getElementById('root'),
 );
