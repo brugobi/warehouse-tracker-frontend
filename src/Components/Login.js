@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { fetchUser } from '../Actions';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import Nav from './Nav';
 
 function Login({ error } ) {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState(0);
 
@@ -21,10 +24,14 @@ function Login({ error } ) {
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(fetchUser(username, password))
+    setTimeout(() => {
+      history.push('/');
+    }, 2500);
   }
 
   return (
     <div>
+      <Nav />
       <label
       >Username:<input onChange={e => handleChange(e)} type='name' name='username' required />
       </label>

@@ -21,6 +21,7 @@ export const createUser = (username, password) => (dispatch) => {
         dispatch(displayError(response.error));
       }
       if (response.username) {
+        localStorage.setItem('username', response.username)
         dispatch(logIn(response.username))
       }
       console.log(response)
@@ -39,6 +40,7 @@ export const fetchUser = (username, password) => (dispatch) => {
         dispatch(displayError(response.error));
       }
       if (response.username) {
+        localStorage.setItem('username', response.username)
         dispatch(logIn(response.username))
       }
       console.log(response)
