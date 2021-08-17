@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { createUser } from '../Actions';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import Nav from './Nav'
+import Nav from './Nav';
 
 function Signup() {
   const history = useHistory();
@@ -25,7 +25,7 @@ function Signup() {
     dispatch(createUser(username, password))
     setTimeout(() => {
       history.push('/');
-    }, 1000);
+    }, 2500);
   }
 
   return (

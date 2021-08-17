@@ -8,7 +8,7 @@ const ProtectedRoute = ({ component: Component }) => {
   useEffect(() => {
     console.log(username)
     if (username) {
-      dispatch(logIn(username))
+      dispatch(logIn(JSON.parse(username)))
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
