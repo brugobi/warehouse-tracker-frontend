@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createItem } from '../Actions';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Nav from './Nav';
 
 function CreateItem({currentUser}) {
@@ -49,6 +50,10 @@ function CreateItem({currentUser}) {
       >current_quantity:<input onChange={e => handleChange(e)} type='name' name='current_quantity' required />
       </label>
       <button onClick={e => handleSubmit(e)}>Add</button>
+      <div>
+        <Link to="/">back</Link>
+        <Link to="/Items">Items</Link>
+      </div>
     </div>
   );
 }

@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import Nav from './Nav';
 import { connect } from 'react-redux';
 
-const Home = ({currentUser}) => {
+const Items = ({ currentUser, itemsData }) => {
   return (
     <div className="App">
       <Nav />
-      <span>I am {currentUser.username}, id: {currentUser.id}</span>
+      <span>Hey{currentUser.username}, id: {currentUser.id}</span>
       <div className="navbar-item">
-        <Link to="/CreateItem">Add new Item</Link>
-        <Link to="/Items">Item</Link>
+        <Link to="/">Back</Link>
       </div>
     </div>
   );
@@ -18,5 +17,6 @@ const Home = ({currentUser}) => {
 
 const selector = (state) => ({
   currentUser: state.userReducer,
+  itemsData: state.addReducer,
 })
-export default connect(selector, null)(Home);
+export default connect(selector, null)(Items);
