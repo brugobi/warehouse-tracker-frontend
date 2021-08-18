@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
 
 const user = {};
+const item = {};
 const error = '';
 const itemsInitialState = {
   items: [],
@@ -11,6 +12,16 @@ function userReducer(state = user, action) {
     case 'LOGIN':
       console.log(action)
       return action.user;
+    default:
+      return state;
+  }
+}
+
+function itemReducer(state = item, action) {
+  switch (action.type) {
+    case 'ITEMS':
+      console.log(action)
+      return action.item;
     default:
       return state;
   }
@@ -41,6 +52,7 @@ const reducers = {
   userReducer,
   errorReducer,
   addReducer,
+  itemReducer,
 };
 
 const appReducer = combineReducers(reducers);

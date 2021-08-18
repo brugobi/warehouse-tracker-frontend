@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../Actions/index';
+
 const ProtectedRoute = ({ component: Component }) => {
   const dispatch = useDispatch()
   let username = localStorage.getItem('username');

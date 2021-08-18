@@ -15,6 +15,11 @@ export const addItem = (item) => ({
   item,
 });
 
+export const fetchItems = (Items) => ({
+  type: 'ITEMS',
+  payload: Items,
+});
+
 export const createItem = (code, name, ideal_quantity, current_quantity, user_id) => {
   fetch(`${API}items`, {
     method: 'post',
@@ -22,6 +27,17 @@ export const createItem = (code, name, ideal_quantity, current_quantity, user_id
     headers: { 'Content-type': 'application/json; charset=UTF-8' },
   }).then(res => res.json())
   .then(res => {console.log(res)})
+}
+
+export const ShowItems = (code, name, ideal_quantity, current_quantity, user_id) => (dispatch) => {
+  fetch(`${API}items`, {
+    method: 'get',
+    body: JSON.stringify({ code, name, ideal_quantity, current_quantity, user_id }),
+    headers: { 'Content-type': 'application/json; charset=UTF-8' },
+  }).then((response) => {
+    const items = response.json();
+    dispatch(fetchItems(items));
+  })
 }
 
 export const createUser = (username, password) => (dispatch) => {
