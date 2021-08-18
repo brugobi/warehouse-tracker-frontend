@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { createItem } from '../Actions';
-import { useDispatch, connect } from 'react-redux';
+import { connect } from 'react-redux';
 import Nav from './Nav';
 
 function CreateItem({currentUser}) {
-  const dispatch = useDispatch();
   const [code, setCode] = useState(0);
   const [name, setName] = useState('');
   const [ideal_quantity, setIdealQuantity] = useState(0);

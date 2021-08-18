@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Nav from './Nav';
 import { connect } from 'react-redux';
 
-const Home = ({currentUser, error}) => {
+const Home = ({currentUser}) => {
   return (
     <div className="App">
       <Nav />
@@ -17,6 +17,5 @@ const Home = ({currentUser, error}) => {
 
 const selector = (state) => ({
   currentUser: state.userReducer,
-  error: state.errorReducer,
 })
 export default connect(selector, null)(Home);
