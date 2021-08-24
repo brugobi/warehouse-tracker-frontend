@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { Provider, subscribe } from 'react-redux';
 import './App.css';
@@ -13,7 +14,7 @@ import CreateItem from './Components/CreateItem';
 import Items from './Components/Items';
 import store from './Reducers/index';
 
-store.subscribe(() => console.log(store.getState()))
+// store.subscribe(() => console.log(store.getState()))
 function App() {
   return (
     <div className="App">
@@ -21,9 +22,9 @@ function App() {
         <Switch>
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup} />
-          <ProtectedRoute exact path='/' component={Home} />
-          <ProtectedRoute exact path='/CreateItem' component={CreateItem} />
-          <ProtectedRoute exact path='/Items' component={Items} />
+          <ProtectedRoute exact path="/" component={Home} />
+          <ProtectedRoute exact path="/CreateItem" component={CreateItem} />
+          <ProtectedRoute exact path="/Items/" component={Items} />
         </Switch>
       </Provider>
     </div>

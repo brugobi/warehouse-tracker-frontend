@@ -1,28 +1,34 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../Actions/index';
 
 const ProtectedRoute = ({ component: Component }) => {
-  const dispatch = useDispatch()
-  let username = localStorage.getItem('username');
+  const dispatch = useDispatch();
+  const username = localStorage.getItem('username');
   useEffect(() => {
-    console.log(username)
+    console.log(username);
     if (username) {
-      dispatch(logIn(JSON.parse(username)))
+      dispatch(logIn(JSON.parse(username)));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
+
   return (
-    < Route
+    <Route
       render={() => {
         if (username) {
-          console.log(username)
-          return (<Component />)
+          // console.log(username);
+          return (<Component />);
         }
-        return <Redirect to='/Login' />
+        return <Redirect to="/Login" />;
       }}
     />
-  )
+  );
 };
+
+ProtectedRoute.propTypes = {
+  component: PropTypes.func.isRequired,
+};
+
 export default ProtectedRoute;

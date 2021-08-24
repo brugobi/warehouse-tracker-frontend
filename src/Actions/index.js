@@ -1,3 +1,6 @@
+/* eslint-disable */
+import axios from 'axios';
+
 const API = 'https://warehouse-api-backend.herokuapp.com/api/v1/';
 
 export const logIn = (user) => ({
@@ -15,30 +18,45 @@ export const addItem = (item) => ({
   item,
 });
 
-export const fetchItems = (Items) => ({
-  type: 'ITEMS',
-  payload: Items,
+export const getRequest = (data) => ({
+  type: 'GET_REQUEST',
+  payload: data,
+});
+
+const fetchItemsSuccess = (id) => ({
+  type: 'FETCH_ITEMS_SUCCESS',
+  payload: id,
+});
+
+const fetchItemsFailure = (error) => ({
+  type: 'FETCH_ITEMS_FAILURE',
+  payload: error,
 });
 
 export const createItem = (code, name, ideal_quantity, current_quantity, user_id) => {
   fetch(`${API}items`, {
     method: 'post',
-    body: JSON.stringify({code, name, ideal_quantity, current_quantity, user_id }),
+    body: JSON.stringify({
+      code, name, ideal_quantity, current_quantity, user_id,
+    }),
     headers: { 'Content-type': 'application/json; charset=UTF-8' },
-  }).then(res => res.json())
-  .then(res => {console.log(res)})
-}
+  }).then((res) => res.json())
+    .then((res) => { console.log(res); });
+};
 
-export const ShowItems = (code, name, ideal_quantity, current_quantity, user_id) => (dispatch) => {
-  fetch(`${API}items`, {
-    method: 'get',
-    body: JSON.stringify({ code, name, ideal_quantity, current_quantity, user_id }),
-    headers: { 'Content-type': 'application/json; charset=UTF-8' },
-  }).then((response) => {
-    const items = response.json();
-    dispatch(fetchItems(items));
-  })
-}
+export const fetchItems = () => (dispatch) => {
+  dispatch(getRequest);
+  axios.get(`${API}items`)
+    .then((response) => {
+      const items = response.data;
+      console.log(items);
+      dispatch(fetchItemsSuccess(items));
+    })
+    .catch((error) => {
+      const errorMsg = error.message;
+      dispatch(fetchItemsFailure(errorMsg));
+    });
+};
 
 export const createUser = (username, password) => (dispatch) => {
   fetch(`${API}register`, {
@@ -51,12 +69,12 @@ export const createUser = (username, password) => (dispatch) => {
         dispatch(displayError(response.error));
       }
       if (response.username) {
-        localStorage.setItem('username', JSON.stringify(response))
-        dispatch(logIn(response))
+        localStorage.setItem('username', JSON.stringify(response));
+        dispatch(logIn(response));
       }
     })
     .catch((err) => { throw Error(`Error: ${err}`); });
-}
+};
 
 export const fetchUser = (username, password) => (dispatch) => {
   fetch(`${API}authenticate`, {
@@ -69,10 +87,10 @@ export const fetchUser = (username, password) => (dispatch) => {
         dispatch(displayError(response.error));
       }
       if (response.username) {
-        localStorage.setItem('username', JSON.stringify(response))
-        dispatch(logIn(response))
+        localStorage.setItem('username', JSON.stringify(response));
+        dispatch(logIn(response));
       }
-      console.log(response)
+      console.log(response);
     })
     .catch((err) => { throw Error(`Error: ${err}`); });
-}
+};
