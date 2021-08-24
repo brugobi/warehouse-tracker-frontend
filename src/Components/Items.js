@@ -14,7 +14,9 @@ const Items = () => {
   const itemData = useSelector((state) => state.itemReducer);
   const user = useSelector((state) => state.userReducer);
 
-  return (
+  if (user.id !== itemData.id) {
+    return <h2>No items</h2>;
+  } return (
     <>
       <div className="App">
         <Nav />
@@ -26,7 +28,10 @@ const Items = () => {
         </span>
         <div>
           {itemData.map((item) => (
-            <p key={item.code}>{item.name}</p>
+            <p key={item.code}>
+              {item.name}
+              {item.id}
+            </p>
           ))}
         </div>
         <div className="navbar-item">
