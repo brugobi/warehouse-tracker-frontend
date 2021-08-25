@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -26,19 +25,16 @@ const Statistics = () => {
         </span>
         <ul>
           {items.length === 0 ? <h2>No items</h2>
-            :
-              items.map((item) =>
-                <li key={item.code}>
-                  <p>
-                    {
-                      item.ideal_quantity -
-                      item.current_quantity
+            : items.map((item) => (
+              <li key={item.code}>
+                <p>
+                  {
+                      item.ideal_quantity
+                      - item.current_quantity
                     }
-                  </p>
-                </li>
-              )
-            
-          }
+                </p>
+              </li>
+            ))}
         </ul>
         <div className="navbar-item">
           <Link to="/">Back</Link>
@@ -49,4 +45,3 @@ const Statistics = () => {
 };
 
 export default Statistics;
-
