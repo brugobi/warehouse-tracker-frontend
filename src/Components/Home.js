@@ -16,6 +16,7 @@ const Home = ({ currentUser }) => (
     <div className="navbar-item">
       <Link to="/CreateItem">Add new Item</Link>
       <Link to="/Items">Item</Link>
+      <Link to="/Statistics">Statistics</Link>
     </div>
   </div>
 );

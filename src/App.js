@@ -12,6 +12,7 @@ import ProtectedRoute from './Components/ProtectedRoute';
 import Home from './Components/Home';
 import CreateItem from './Components/CreateItem';
 import Items from './Components/Items';
+import Statistics from './Components/Statistics';
 import store from './Reducers/index';
 
 // store.subscribe(() => console.log(store.getState()))
@@ -24,7 +25,8 @@ function App() {
           <Route exact path="/Signup" component={Signup} />
           <ProtectedRoute exact path="/" component={Home} />
           <ProtectedRoute exact path="/CreateItem" component={CreateItem} />
-          <ProtectedRoute exact path="/Items/" component={Items} />
+          <ProtectedRoute exact path="/Items" component={Items} />
+          <ProtectedRoute exact path="/Statistics" component={Statistics} />
         </Switch>
       </Provider>
     </div>
