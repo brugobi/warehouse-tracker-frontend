@@ -6,7 +6,6 @@ function Nav() {
   const history = useHistory();
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
-
       <div className="navbar-brand">
         <div className="navbar-item">
           <div className="brand">WAREHOUSE</div>
@@ -15,21 +14,25 @@ function Nav() {
 
       {username
         ? (
-          <button
-            type="button"
-            onClick={() => {
-              localStorage.removeItem('username');
-              history.go(0);
-            }}
-          >
-            LOGOUT
-          </button>
-        ) : (
           <div className="navbar-end">
             <div className="navbar-item">
+              <button
+                type="button"
+                onClick={() => {
+                  localStorage.removeItem('username');
+                  history.go(0);
+                }}
+              >
+                LOGOUT
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <div>
               <Link to="/Login">Login</Link>
             </div>
-            <div className="navbar-item">
+            <div>
               <Link to="/Signup">Signup</Link>
             </div>
           </div>

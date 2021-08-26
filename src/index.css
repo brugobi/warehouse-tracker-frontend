@@ -1,3 +1,30 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+}
+
+nav {
+  height: 20vh;
+}
+
+main {
+  height: 60vh;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+footer {
+  height: 20vh;
+  padding: 20px;
+  background-color: chartreuse;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }

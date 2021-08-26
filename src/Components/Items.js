@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import Nav from './Nav';
 import { fetchItems } from '../Actions';
 
 const Items = () => {
@@ -16,7 +15,6 @@ const Items = () => {
   return (
     <>
       <div className="App">
-        <Nav />
         <span>
           Hey
           {user.username}

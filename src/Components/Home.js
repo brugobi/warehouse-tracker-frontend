@@ -2,22 +2,21 @@ import React from 'react';
 /* eslint-disable */
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import Footer from './Footer';
 import Nav from './Nav';
+import Items from './Items';
 
 const Home = ({ currentUser }) => (
   <div className="App">
     <Nav />
-    <span>
+    <main>
       I am
       {currentUser.username}
       , id:
       {currentUser.id}
-    </span>
-    <div className="navbar-item">
-      <Link to="/CreateItem">Add new Item</Link>
-      <Link to="/Items">Item</Link>
-      <Link to="/Statistics">Statistics</Link>
-    </div>
+    <Items />
+    </main>
+    <Footer />
   </div>
 );
 
