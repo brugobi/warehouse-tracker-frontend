@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { BiLock } from 'react-icons/bi';
+import { FaUser } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { connect, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
@@ -51,10 +53,7 @@ function Login({ error }) {
                   <div className="control has-icons-left has-icons-right">
                     <input onChange={(e) => handleChange(e)} placeholder="username" className="input" type="text" name="username" required />
                     <span className="icon is-small is-left">
-                      icon
-                    </span>
-                    <span className="icon is-small is-right">
-                      icon
+                      <FaUser />
                     </span>
                   </div>
                 </label>
@@ -64,10 +63,7 @@ function Login({ error }) {
                   <div className="control has-icons-left has-icons-right">
                     <input onChange={(e) => handleChange(e)} placeholder="password" className="input" type="password" name="password" required />
                     <span className="icon is-small is-left">
-                      icon
-                    </span>
-                    <span className="icon is-small is-right">
-                      icon
+                      <BiLock />
                     </span>
                   </div>
                 </label>
