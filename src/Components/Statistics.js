@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import Nav from './Nav';
+import Footer from './Footer';
 import { fetchItems } from '../Actions';
 
 const Statistics = () => {
@@ -36,9 +36,7 @@ const Statistics = () => {
               </li>
             ))}
         </ul>
-        <div className="navbar-item">
-          <Link to="/">Back</Link>
-        </div>
+        <Footer />
       </div>
     </>
   );

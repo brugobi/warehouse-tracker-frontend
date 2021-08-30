@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchItems } from '../Actions';
 
@@ -32,9 +31,6 @@ const Items = () => {
               </li>
             ))}
         </ul>
-        <div className="navbar-item">
-          <Link to="/">Back</Link>
-        </div>
       </div>
     </>
   );

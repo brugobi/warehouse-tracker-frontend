@@ -1,6 +1,5 @@
 /* eslint-disable */
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Footer from './Footer';
 import Nav from './Nav';

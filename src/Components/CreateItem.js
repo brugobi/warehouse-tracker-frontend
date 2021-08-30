@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { createItem } from '../Actions';
 import Nav from './Nav';
+import Footer from './Footer';
 
 function CreateItem({ currentUser }) {
   const [code, setCode] = useState(0);
@@ -54,10 +55,7 @@ function CreateItem({ currentUser }) {
         <input onChange={(e) => handleChange(e)} type="name" name="current_quantity" required />
       </label>
       <button type="button" onClick={(e) => handleSubmit(e)}>Add</button>
-      <div>
-        <Link to="/">back</Link>
-        <Link to="/Items">Items</Link>
-      </div>
+      <Footer />
     </div>
   );
 }
