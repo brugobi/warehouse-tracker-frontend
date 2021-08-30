@@ -4,6 +4,7 @@ import { connect, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { fetchUser } from '../Actions';
 import Nav from './Nav';
+import background from '../img/background.jpg';
 
 function Login({ error }) {
   const dispatch = useDispatch();
@@ -30,18 +31,56 @@ function Login({ error }) {
   };
 
   return (
-    <div>
+    <div style={{ backgroundImage: `url(${background})` }}>
       <Nav />
-      <label htmlFor="name">
-        Username:
-        <input onChange={(e) => handleChange(e)} type="name" name="username" required />
-      </label>
-      <label htmlFor="password">
-        Password:
-        <input onChange={(e) => handleChange(e)} type="password" name="password" required />
-      </label>
-      <button type="button" onClick={(e) => handleSubmit(e)}>Login</button>
-      <h2>{ error }</h2>
+      <div className="login-form-container">
+        <div className="card width-400">
+          <div className="card-image">
+            <figure className="image">
+              <img src={background} alt="placeholder" />
+            </figure>
+          </div>
+          <div className="card-content">
+            <div className="media">
+              <div className="is-size-4">Login</div>
+            </div>
+
+            <div className="content">
+              <div className="field">
+                <label htmlFor="name">
+                  <div className="control has-icons-left has-icons-right">
+                    <input onChange={(e) => handleChange(e)} placeholder="username" className="input" type="text" name="username" required />
+                    <span className="icon is-small is-left">
+                      icon
+                    </span>
+                    <span className="icon is-small is-right">
+                      icon
+                    </span>
+                  </div>
+                </label>
+              </div>
+              <div className="field">
+                <label htmlFor="password">
+                  <div className="control has-icons-left has-icons-right">
+                    <input onChange={(e) => handleChange(e)} placeholder="password" className="input" type="password" name="password" required />
+                    <span className="icon is-small is-left">
+                      icon
+                    </span>
+                    <span className="icon is-small is-right">
+                      icon
+                    </span>
+                  </div>
+                </label>
+                <div className="field padding-2-5">
+                  <button className="button is-fullwidth is-success" type="button" onClick={(e) => handleSubmit(e)}>Login</button>
+                  <h2>{error}</h2>
+                </div>
+              </div>
+              <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

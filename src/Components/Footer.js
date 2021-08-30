@@ -6,7 +6,7 @@ function Footer() {
     <footer>
       <div className="fixed-bottom">
         <div className="container">
-          <div className="columns is-mobile">
+          <div className="columns is-mobile is-flex">
             <div className="column">
               <Link to="/CreateItem">Add new Item</Link>
             </div>

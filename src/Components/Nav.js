@@ -28,11 +28,11 @@ function Nav() {
             </div>
           </div>
         ) : (
-          <div>
-            <div>
+          <div className="navbar-end">
+            <div className="navbar-item">
               <Link to="/Login">Login</Link>
             </div>
-            <div>
+            <div className="navbar-item">
               <Link to="/Signup">Signup</Link>
             </div>
           </div>
