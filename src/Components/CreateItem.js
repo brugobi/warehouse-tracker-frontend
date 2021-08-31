@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { createItem } from '../Actions';
 import Nav from './Nav';
 import Footer from './Footer';
@@ -9,8 +8,8 @@ import Footer from './Footer';
 function CreateItem({ currentUser }) {
   const [code, setCode] = useState(0);
   const [name, setName] = useState('');
-  const [ideal_quantity, setIdealQuantity] = useState(0);
-  const [current_quantity, setCurrentQuantity] = useState(0);
+  const [idealQuantity, setIdealQuantity] = useState(0);
+  const [currentQuantity, setCurrentQuantity] = useState(0);
 
   const handleChange = (e) => {
     const target = e.target.name;
@@ -22,16 +21,16 @@ function CreateItem({ currentUser }) {
     if (target === 'name') {
       setName(val);
     }
-    if (target === 'ideal_quantity') {
+    if (target === 'idealQuantity') {
       setIdealQuantity(val);
     }
-    if (target === 'current_quantity') {
+    if (target === 'currentQuantity') {
       setCurrentQuantity(val);
     }
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    createItem(code, name, ideal_quantity, current_quantity, currentUser.id);
+    createItem(code, name, idealQuantity, currentQuantity, currentUser.id);
   };
 
   return (

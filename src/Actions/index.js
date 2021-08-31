@@ -33,11 +33,11 @@ const fetchItemsFailure = (error) => ({
   payload: error,
 });
 
-export const createItem = (code, name, ideal_quantity, current_quantity, user_id) => {
+export const createItem = (code, name, idealQuantity, currentQuantity, userId) => {
   fetch(`${API}items`, {
     method: 'post',
     body: JSON.stringify({
-      code, name, ideal_quantity, current_quantity, user_id,
+      code, name, ideal_quantity: idealQuantity, current_quantity: currentQuantity, user_id: userId,
     }),
     headers: { 'Content-type': 'application/json; charset=UTF-8' },
   }).then((res) => res.json())
