@@ -37,24 +37,62 @@ function CreateItem({ currentUser }) {
   return (
     <div>
       <Nav />
-      add item
-      <label htmlFor="code">
-        Code:
-        <input onChange={(e) => handleChange(e)} type="name" name="code" required />
-      </label>
-      <label htmlFor="name">
-        Name:
-        <input onChange={(e) => handleChange(e)} type="name" name="name" required />
-      </label>
-      <label htmlFor="ideal_quantity">
-        ideal_quantity:
-        <input onChange={(e) => handleChange(e)} type="name" name="ideal_quantity" required />
-      </label>
-      <label htmlFor="current_quantity">
-        current_quantity:
-        <input onChange={(e) => handleChange(e)} type="name" name="current_quantity" required />
-      </label>
-      <button type="button" onClick={(e) => handleSubmit(e)}>Add</button>
+      <section className="hero">
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            <div className="box">
+              <h1 className="title">Create Item</h1>
+              <div className="field is-horizontal">
+                <div className="field-body">
+                  <div className="field">
+                    <p className="control">
+                      <label className="label">Code</label>
+                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="text" name="code" required />
+                    </p>
+                  </div>
+                  <div className="field">
+                    <p className="control">
+                      <label className="label">Name</label>
+                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="name" required />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="field is-horizontal">
+                <div className="field-body">
+                  <div className="field">
+                    <p className="control">
+                      <label className="label">Ideal Quantity</label>
+                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="ideal_quantity" required />
+                    </p>
+                  </div>
+                  <div className="field">
+                    <p className="control">
+                      <label className="label">Current Quantity</label>
+                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="current_quantity" required />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="field is-horizontal">
+                <div className="field-body">
+                  <div className="field">
+                    <p className="control" />
+                  </div>
+                  <div className="field">
+                    <p className="control">
+                      <button className="button is-info is-medium is-fullwidth" type="button" onClick={(e) => handleSubmit(e)}>Create</button>
+                    </p>
+                  </div>
+                  <div className="field">
+                    <p className="control" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );
