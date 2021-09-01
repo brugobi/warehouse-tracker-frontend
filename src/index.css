@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Goblin+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -40,6 +43,33 @@ main {
 
 .padding-2-5 {
   padding-top: 2.5em;
+}
+
+.items-wrapper {
+  background-color: white;
+  margin: 40px 5px !important;
+  border: solid 1px #e8e8e8;
+  padding-top: 20px;
+  border: 1px solid #4c79f2;
+  background-color: black !important;
+  box-shadow: 1px 7px 10px rgba(72, 152, 243, 0.5) !important;
+}
+
+.courier {
+  font-weight: bold;
+  font-family: "Courier New", monospace;
+}
+
+.OpenSans-font {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.color-blue {
+  color: #4c79f2;
+}
+
+.color-orange {
+  color: orange !important;
 }
 
 footer {
