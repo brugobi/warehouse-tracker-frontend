@@ -18,22 +18,33 @@ const Statistics = () => {
       <div className="App">
         <Nav />
         <span>
-          Hey
+          Hey&nbsp;&nbsp;
           {user.username}
-          , id:
-          {user.id}
         </span>
         <ul>
           {items.length === 0 ? <h2>No items</h2>
             : items.map((item) => (
-              <li key={item.code}>
-                <p>
-                  {
-                      item.ideal_quantity
-                      - item.current_quantity
-                    }
-                </p>
-              </li>
+              <section key={item.id}>
+                <div className="container" key={item.code}>
+                  <div className="columns items-wrapper">
+                    <div className="column courier">
+                      <p className="subtitle color-orange">{item.code}</p>
+                      <p className="is-size-1 title color-blue">{item.name}</p>
+                    </div>
+                    <div className="column courier">
+                      <p className={(item.current_quantity
+                        - item.ideal_quantity) >= 0 ? 'is-success is-size-2 subtitle' : 'is-danger is-size-2 subtitle'}
+                      >
+                        {
+                            item.current_quantity
+                            - item.ideal_quantity
+                          }
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </section>
             ))}
         </ul>
         <Footer />

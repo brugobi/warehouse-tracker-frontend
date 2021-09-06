@@ -63,7 +63,7 @@ main {
 }
 
 .color-blue {
-  color: #4c79f2;
+  color: #4c79f2 !important;
 }
 
 .color-orange {
@@ -76,6 +76,14 @@ main {
 
 .is-white {
   color: white !important;
+}
+
+.is-success {
+  color: greenyellow !important;
+}
+
+.is-danger {
+  color: red !important;
 }
 
 .nav-menu {

@@ -62,13 +62,13 @@ function CreateItem({ currentUser }) {
                   <div className="field">
                     <p className="control">
                       <label className="label">Ideal Quantity</label>
-                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="ideal_quantity" required />
+                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="idealQuantity" required />
                     </p>
                   </div>
                   <div className="field">
                     <p className="control">
                       <label className="label">Current Quantity</label>
-                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="current_quantity" required />
+                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="currentQuantity" required />
                     </p>
                   </div>
                 </div>
