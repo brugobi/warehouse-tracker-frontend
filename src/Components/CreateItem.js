@@ -8,10 +8,14 @@ import Nav from './Nav';
 import Footer from './Footer';
 
 function CreateItem({ currentUser }) {
-  const [code, setCode] = useState(0);
+  const [code, setCode] = useState('');
   const [name, setName] = useState('');
   const [idealQuantity, setIdealQuantity] = useState(0);
   const [currentQuantity, setCurrentQuantity] = useState(0);
+  const errorsObj = {
+    code: null, name: '', idealQuantity: null, currentQuantity: null,
+  };
+  const [errors, setErrors] = useState(errorsObj);
 
   const handleChange = (e) => {
     const target = e.target.name;
@@ -35,9 +39,34 @@ function CreateItem({ currentUser }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createItem(code, name, idealQuantity, currentQuantity, currentUser.id);
-    document.getElementById('createItem').reset();
-    toast.success('A new item has been created');
+    let error = false;
+    const errorObj = { ...errorsObj };
+    if (name === '') {
+      errorObj.name = 'Name is Required';
+      error = true;
+    }
+    if (code === '') {
+      errorObj.code = 'Code is Required';
+      error = true;
+    }
+
+    if (idealQuantity === 0) {
+      errorObj.idealQuantity = 'Ideal Quantity is Required';
+      error = true;
+    }
+
+    if (currentQuantity === 0) {
+      errorObj.currentQuantity = 'Current Quantity is Required';
+      error = true;
+    }
+
+    setErrors(errorObj);
+
+    if (!error) {
+      createItem(code, name, idealQuantity, currentQuantity, currentUser.id);
+      document.getElementById('createItem').reset();
+      toast.success('A new item has been created');
+    }
   };
 
   return (
@@ -58,6 +87,7 @@ function CreateItem({ currentUser }) {
                       </label>
                     </p>
                   </div>
+                  {errors.code && <div className="has-text-danger">{errors.code}</div>}
                   <div className="field">
                     <p className="control">
                       <label htmlFor="name" className="label">
@@ -66,6 +96,7 @@ function CreateItem({ currentUser }) {
                       </label>
                     </p>
                   </div>
+                  {errors.name && <div className="has-text-danger">{errors.name}</div>}
                 </div>
               </div>
               <div className="field is-horizontal">
@@ -78,14 +109,16 @@ function CreateItem({ currentUser }) {
                       </label>
                     </p>
                   </div>
+                  {errors.idealQuantity && <div className="has-text-danger">{errors.idealQuantity}</div>}
                   <div className="field">
                     <p className="control">
                       <label htmlFor="currentQuantity" className="label">
                         Current Quantity
-                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="currentQuantity" id="currentQuantity" required />
+                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="number" name="currentQuantity" id="currentQuantity" required />
                       </label>
                     </p>
                   </div>
+                  {errors.currentQuantity && <div className="has-text-danger">{errors.currentQuantity}</div>}
                 </div>
               </div>
               <div className="field is-horizontal">
