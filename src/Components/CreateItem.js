@@ -1,6 +1,6 @@
-/* eslint-disable */
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { createItem } from '../Actions';
 import Nav from './Nav';
 import Footer from './Footer';
@@ -31,6 +31,7 @@ function CreateItem({ currentUser }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     createItem(code, name, idealQuantity, currentQuantity, currentUser.id);
+    document.getElementById('createItem').reset();
   };
 
   return (
@@ -39,20 +40,24 @@ function CreateItem({ currentUser }) {
       <section className="hero">
         <div className="hero-body">
           <div className="container has-text-centered">
-            <div className="box">
+            <form id="createItem" className="box">
               <h1 className="title">Create Item</h1>
               <div className="field is-horizontal">
                 <div className="field-body">
                   <div className="field">
                     <p className="control">
-                      <label className="label">Code</label>
-                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="text" name="code" required />
+                      <label htmlFor="code" className="label">
+                        Code
+                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="text" name="code" id="code" required />
+                      </label>
                     </p>
                   </div>
                   <div className="field">
                     <p className="control">
-                      <label className="label">Name</label>
-                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="name" required />
+                      <label htmlFor="name" className="label">
+                        Name
+                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="name" id="name" required />
+                      </label>
                     </p>
                   </div>
                 </div>
@@ -61,14 +66,18 @@ function CreateItem({ currentUser }) {
                 <div className="field-body">
                   <div className="field">
                     <p className="control">
-                      <label className="label">Ideal Quantity</label>
-                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="idealQuantity" required />
+                      <label htmlFor="idealQuantity" className="label">
+                        Ideal Quantity
+                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="idealQuantity" id="idealQuantity" required />
+                      </label>
                     </p>
                   </div>
                   <div className="field">
                     <p className="control">
-                      <label className="label">Current Quantity</label>
-                      <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="currentQuantity" required />
+                      <label htmlFor="currentQuantity" className="label">
+                        Current Quantity
+                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="currentQuantity" id="currentQuantity" required />
+                      </label>
                     </p>
                   </div>
                 </div>
@@ -88,7 +97,7 @@ function CreateItem({ currentUser }) {
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -99,4 +108,9 @@ function CreateItem({ currentUser }) {
 const selector = (state) => ({
   currentUser: state.userReducer,
 });
+
+CreateItem.propTypes = {
+  currentUser: PropTypes.string.isRequired,
+};
+
 export default connect(selector, null)(CreateItem);
