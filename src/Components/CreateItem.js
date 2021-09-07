@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createItem } from '../Actions';
@@ -28,10 +30,14 @@ function CreateItem({ currentUser }) {
       setCurrentQuantity(val);
     }
   };
+
+  toast.configure();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     createItem(code, name, idealQuantity, currentQuantity, currentUser.id);
     document.getElementById('createItem').reset();
+    toast.success('A new item has been created');
   };
 
   return (
@@ -68,7 +74,7 @@ function CreateItem({ currentUser }) {
                     <p className="control">
                       <label htmlFor="idealQuantity" className="label">
                         Ideal Quantity
-                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="idealQuantity" id="idealQuantity" required />
+                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="number" name="idealQuantity" id="idealQuantity" required />
                       </label>
                     </p>
                   </div>
