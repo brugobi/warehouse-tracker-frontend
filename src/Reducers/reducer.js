@@ -10,7 +10,6 @@ const itemsInitialState = {
 function userReducer(state = user, action) {
   switch (action.type) {
     case 'LOGIN':
-      console.log(action);
       return action.user;
     default:
       return state;
@@ -20,7 +19,6 @@ function userReducer(state = user, action) {
 function itemReducer(state = item, action) {
   switch (action.type) {
     case 'FETCH_ITEMS_SUCCESS':
-      console.log(action);
       return action.payload;
     default:
       return state;

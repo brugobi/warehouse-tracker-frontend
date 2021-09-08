@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from 'react';
 import { IconContext } from 'react-icons';
 import { FaBoxes } from 'react-icons/fa';
@@ -12,6 +11,10 @@ function Nav() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  const handleLogout = () => {
+    localStorage.removeItem('username');
+    history.go(0);
+  };
 
   return (
     <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
@@ -34,39 +37,35 @@ function Nav() {
           {click ? <AiOutlineClose /> : <GiHamburgerMenu />}
 
         </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li
+        <div className={click ? 'nav-menu active' : 'nav-menu'}>
+          <div
             onClick={closeMobileMenu}
             onKeyPress={closeMobileMenu}
+            role="button"
+            tabIndex={0}
           >
             <Link to="/Login">Login</Link>
-          </li>
-          <li
+          </div>
+          <div
             onClick={closeMobileMenu}
             onKeyPress={closeMobileMenu}
+            role="button"
+            tabIndex={0}
           >
             <Link to="/Signup">Signup</Link>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
 
       {username
         ? (
           <div className="navbar-end">
             <div className="navbar-item">
-              <button
-                className="button is-link"
-                type="button"
-                onClick={() => {
-                  localStorage.removeItem('username');
-                  history.go(0);
-                }}
-              >
-                LOGOUT
-              </button>
+              <Link onClick={handleLogout} to="/">LOGOUT</Link>
             </div>
           </div>
         ) : (
+
           <div className="navbar-menu">
             <div className="navbar-end">
               <div className="navbar-item">
@@ -76,30 +75,6 @@ function Nav() {
                 <Link to="/Signup">Signup</Link>
               </div>
             </div>
-            {/* <div
-              className="navbar-burger navbar-end"
-              onClick={handleClick}
-              onKeyPress={handleClick}
-              role="button"
-              tabIndex="0"
-            >
-              {click ? <AiOutlineClose /> : <GiHamburgerMenu />}
-
-            </div>
-            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-              <li
-                onClick={closeMobileMenu}
-                onKeyPress={closeMobileMenu}
-              >
-                <Link to="/Login">Login</Link>
-              </li>
-              <li
-                onClick={closeMobileMenu}
-                onKeyPress={closeMobileMenu}
-              >
-                <Link to="/Signup">Signup</Link>
-              </li>
-            </ul> */}
           </div>
         )}
     </nav>
