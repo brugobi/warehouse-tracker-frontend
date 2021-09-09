@@ -1,8 +1,8 @@
-/* eslint-disable */
 import React from 'react';
-import { Provider, subscribe } from 'react-redux';
+import { Provider } from 'react-redux';
 import './App.css';
 import {
+  BrowserRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom';
@@ -15,19 +15,22 @@ import Items from './Components/Items';
 import Statistics from './Components/Statistics';
 import store from './Reducers/index';
 
-// store.subscribe(() => console.log(store.getState()))
 function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <Switch>
-          <Route exact path="/Login" component={Login} />
-          <Route exact path="/Signup" component={Signup} />
-          <ProtectedRoute exact path="/" component={Home} />
-          <ProtectedRoute exact path="/CreateItem" component={CreateItem} />
-          <ProtectedRoute exact path="/Items" component={Items} />
-          <ProtectedRoute exact path="/Statistics" component={Statistics} />
-        </Switch>
+        <Router>
+          <>
+            <Switch>
+              <Route exact path="/Login" component={Login} />
+              <Route exact path="/Signup" component={Signup} />
+              <ProtectedRoute exact path="/" component={Home} />
+              <ProtectedRoute exact path="/CreateItem" component={CreateItem} />
+              <ProtectedRoute exact path="/Items" component={Items} />
+              <ProtectedRoute exact path="/Statistics" component={Statistics} />
+            </Switch>
+          </>
+        </Router>
       </Provider>
     </div>
   );
