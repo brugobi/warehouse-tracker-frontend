@@ -44,15 +44,23 @@ function Nav() {
             role="button"
             tabIndex={0}
           >
-            <Link to="/Login">Login</Link>
-          </div>
-          <div
-            onClick={closeMobileMenu}
-            onKeyPress={closeMobileMenu}
-            role="button"
-            tabIndex={0}
-          >
-            <Link to="/Signup">Signup</Link>
+            {username
+              ? (
+                <div className="navbar-end">
+                  <div className="navbar-item">
+                    <Link onClick={handleLogout} to="/">LOGOUT</Link>
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <div className="navbar-item">
+                    <Link to="/Login">Login</Link>
+                  </div>
+                  <div className="navbar-item">
+                    <Link to="/Signup">Signup</Link>
+                  </div>
+                </>
+              )}
           </div>
         </div>
       </div>
@@ -60,22 +68,23 @@ function Nav() {
       {username
         ? (
           <div className="navbar-end">
-            <div className="navbar-item">
+            <div className="navbar-item is-hidden-mobile">
               <Link onClick={handleLogout} to="/">LOGOUT</Link>
             </div>
           </div>
         ) : (
-
-          <div className="navbar-menu">
-            <div className="navbar-end">
-              <div className="navbar-item">
-                <Link to="/Login">Login</Link>
-              </div>
-              <div className="navbar-item">
-                <Link to="/Signup">Signup</Link>
+          <>
+            <div className="navbar-menu">
+              <div className="navbar-end">
+                <div className="navbar-item">
+                  <Link to="/Login">Login</Link>
+                </div>
+                <div className="navbar-item">
+                  <Link to="/Signup">Signup</Link>
+                </div>
               </div>
             </div>
-          </div>
+          </>
         )}
     </nav>
   );
