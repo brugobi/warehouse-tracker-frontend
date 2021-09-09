@@ -22,7 +22,6 @@ describe('<CreateItem />', () => {
     expect(wrapper.find('Footer')).toBeTruthy();
   });
 
-  // this one is not working
   it('matches the snapshot', () => {
     const tree = renderer.create(
       <Router><Provider store={store}><CreateItem /></Provider></Router>,
