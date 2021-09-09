@@ -20,7 +20,7 @@ function CreateItem({ currentUser }) {
   const handleChange = (e) => {
     const target = e.target.name;
     const val = e.target.value;
-    // console.log(target);
+
     if (target === 'code') {
       setCode(val);
     }
@@ -70,78 +70,80 @@ function CreateItem({ currentUser }) {
   };
 
   return (
-    <div>
-      <Nav />
-      <section className="hero">
-        <div className="hero-body">
-          <div className="container has-text-centered">
-            <form id="createItem" className="box">
-              <h1 className="title">Create Item</h1>
-              <div className="field is-horizontal">
-                <div className="field-body">
-                  <div className="field">
-                    <p className="control">
-                      <label htmlFor="code" className="label">
-                        Code
-                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="text" name="code" id="code" required />
-                      </label>
-                    </p>
-                  </div>
-                  {errors.code && <div className="has-text-danger">{errors.code}</div>}
-                  <div className="field">
-                    <p className="control">
-                      <label htmlFor="name" className="label">
-                        Name
-                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="name" id="name" required />
-                      </label>
-                    </p>
-                  </div>
-                  {errors.name && <div className="has-text-danger">{errors.name}</div>}
-                </div>
-              </div>
-              <div className="field is-horizontal">
-                <div className="field-body">
-                  <div className="field">
-                    <p className="control">
-                      <label htmlFor="idealQuantity" className="label">
-                        Ideal Quantity
-                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="number" name="idealQuantity" id="idealQuantity" required />
-                      </label>
-                    </p>
-                  </div>
-                  {errors.idealQuantity && <div className="has-text-danger">{errors.idealQuantity}</div>}
-                  <div className="field">
-                    <p className="control">
-                      <label htmlFor="currentQuantity" className="label">
-                        Current Quantity
-                        <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="number" name="currentQuantity" id="currentQuantity" required />
-                      </label>
-                    </p>
-                  </div>
-                  {errors.currentQuantity && <div className="has-text-danger">{errors.currentQuantity}</div>}
-                </div>
-              </div>
-              <div className="field is-horizontal">
-                <div className="field-body">
-                  <div className="field">
-                    <p className="control" />
-                  </div>
-                  <div className="field">
-                    <p className="control">
-                      <button className="button is-info is-medium is-fullwidth" type="button" onClick={(e) => handleSubmit(e)}>Create</button>
-                    </p>
-                  </div>
-                  <div className="field">
-                    <p className="control" />
+    <>
+      <div>
+        <Nav />
+        <section className="hero">
+          <div className="hero-body">
+            <div className="container has-text-centered">
+              <form id="createItem" className="box">
+                <h1 className="title">Create Item</h1>
+                <div className="field is-horizontal">
+                  <div className="field-body">
+                    <div className="field">
+                      <p className="control">
+                        <label htmlFor="code" className="label">
+                          Code
+                          <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="text" name="code" id="code" required />
+                        </label>
+                      </p>
+                    </div>
+                    {errors.code && <div className="has-text-danger">{errors.code}</div>}
+                    <div className="field">
+                      <p className="control">
+                        <label htmlFor="name" className="label">
+                          Name
+                          <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="name" id="name" required />
+                        </label>
+                      </p>
+                    </div>
+                    {errors.name && <div className="has-text-danger">{errors.name}</div>}
                   </div>
                 </div>
-              </div>
-            </form>
+                <div className="field is-horizontal">
+                  <div className="field-body">
+                    <div className="field">
+                      <p className="control">
+                        <label htmlFor="idealQuantity" className="label">
+                          Ideal Quantity
+                          <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="number" name="idealQuantity" id="idealQuantity" required />
+                        </label>
+                      </p>
+                    </div>
+                    {errors.idealQuantity && <div className="has-text-danger">{errors.idealQuantity}</div>}
+                    <div className="field">
+                      <p className="control">
+                        <label htmlFor="currentQuantity" className="label">
+                          Current Quantity
+                          <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="number" name="currentQuantity" id="currentQuantity" required />
+                        </label>
+                      </p>
+                    </div>
+                    {errors.currentQuantity && <div className="has-text-danger">{errors.currentQuantity}</div>}
+                  </div>
+                </div>
+                <div className="field is-horizontal">
+                  <div className="field-body">
+                    <div className="field">
+                      <p className="control" />
+                    </div>
+                    <div className="field">
+                      <p className="control">
+                        <button className="button is-info is-medium is-fullwidth" type="button" onClick={(e) => handleSubmit(e)}>Create</button>
+                      </p>
+                    </div>
+                    <div className="field">
+                      <p className="control" />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
-      </section>
-      <Footer />
-    </div>
+        </section>
+        <Footer />
+      </div>
+    </>
   );
 }
 const selector = (state) => ({
