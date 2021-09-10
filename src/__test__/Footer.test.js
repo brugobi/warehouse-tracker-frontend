@@ -8,7 +8,7 @@ import { GrAddCircle } from 'react-icons/gr';
 import { AiFillHome } from 'react-icons/ai';
 import { BsGraphUp } from 'react-icons/bs';
 
-test('Link changes the class when hovered', () => {
+test('Link changes the class when clicked', () => {
   const component = renderer.create(
     <Router>
       <Link to="/CreateItem"><GrAddCircle /></Link>
