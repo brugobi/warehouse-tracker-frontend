@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import {
   BrowserRouter as Router,
   Link,
