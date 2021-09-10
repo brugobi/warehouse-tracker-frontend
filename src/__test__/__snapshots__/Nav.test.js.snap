@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link changes the class when clicked 1`] = `
+Array [
+  <a
+    href="/Login"
+    onClick={[Function]}
+  >
+    Login
+  </a>,
+  ",",
+  <a
+    href="/Signup"
+    onClick={[Function]}
+  >
+    Signup
+  </a>,
+  ",",
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    LOGOUT
+  </a>,
+  ",",
+]
+`;
+
+exports[`Link changes the class when clicked 2`] = `
+Array [
+  <a
+    href="/Login"
+    onClick={[Function]}
+  >
+    Login
+  </a>,
+  ",",
+  <a
+    href="/Signup"
+    onClick={[Function]}
+  >
+    Signup
+  </a>,
+  ",",
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    LOGOUT
+  </a>,
+  ",",
+]
+`;
+
+exports[`Link changes the class when hovered 1`] = `
+Array [
+  <a
+    href="/Login"
+    onClick={[Function]}
+  >
+    Login
+  </a>,
+  ",",
+  <a
+    href="/Signup"
+    onClick={[Function]}
+  >
+    Signup
+  </a>,
+  ",",
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    LOGOUT
+  </a>,
+  ",",
+]
+`;
+
+exports[`Link changes the class when hovered 2`] = `
+Array [
+  <a
+    href="/Login"
+    onClick={[Function]}
+  >
+    Login
+  </a>,
+  ",",
+  <a
+    href="/Signup"
+    onClick={[Function]}
+  >
+    Signup
+  </a>,
+  ",",
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    LOGOUT
+  </a>,
+  ",",
+]
+`;
