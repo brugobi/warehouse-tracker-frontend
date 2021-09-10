@@ -1,20 +1,24 @@
 {
   "files": {
-    "main.css": "/brugobi/warehouse-tracker-frontend/static/css/main.2c48dd14.chunk.css",
-    "main.js": "/brugobi/warehouse-tracker-frontend/static/js/main.0d440c8e.chunk.js",
-    "main.js.map": "/brugobi/warehouse-tracker-frontend/static/js/main.0d440c8e.chunk.js.map",
+    "main.css": "/brugobi/warehouse-tracker-frontend/static/css/main.76bc5abb.chunk.css",
+    "main.js": "/brugobi/warehouse-tracker-frontend/static/js/main.58aaa015.chunk.js",
+    "main.js.map": "/brugobi/warehouse-tracker-frontend/static/js/main.58aaa015.chunk.js.map",
     "runtime-main.js": "/brugobi/warehouse-tracker-frontend/static/js/runtime-main.59da3c1f.js",
     "runtime-main.js.map": "/brugobi/warehouse-tracker-frontend/static/js/runtime-main.59da3c1f.js.map",
-    "static/js/2.b4a1c37d.chunk.js": "/brugobi/warehouse-tracker-frontend/static/js/2.b4a1c37d.chunk.js",
-    "static/js/2.b4a1c37d.chunk.js.map": "/brugobi/warehouse-tracker-frontend/static/js/2.b4a1c37d.chunk.js.map",
+    "static/css/2.c589ddb6.chunk.css": "/brugobi/warehouse-tracker-frontend/static/css/2.c589ddb6.chunk.css",
+    "static/js/2.6cd7546f.chunk.js": "/brugobi/warehouse-tracker-frontend/static/js/2.6cd7546f.chunk.js",
+    "static/js/2.6cd7546f.chunk.js.map": "/brugobi/warehouse-tracker-frontend/static/js/2.6cd7546f.chunk.js.map",
     "index.html": "/brugobi/warehouse-tracker-frontend/index.html",
-    "static/css/main.2c48dd14.chunk.css.map": "/brugobi/warehouse-tracker-frontend/static/css/main.2c48dd14.chunk.css.map",
-    "static/js/2.b4a1c37d.chunk.js.LICENSE.txt": "/brugobi/warehouse-tracker-frontend/static/js/2.b4a1c37d.chunk.js.LICENSE.txt"
+    "static/css/2.c589ddb6.chunk.css.map": "/brugobi/warehouse-tracker-frontend/static/css/2.c589ddb6.chunk.css.map",
+    "static/css/main.76bc5abb.chunk.css.map": "/brugobi/warehouse-tracker-frontend/static/css/main.76bc5abb.chunk.css.map",
+    "static/js/2.6cd7546f.chunk.js.LICENSE.txt": "/brugobi/warehouse-tracker-frontend/static/js/2.6cd7546f.chunk.js.LICENSE.txt",
+    "static/media/background.68a36d9a.jpg": "/brugobi/warehouse-tracker-frontend/static/media/background.68a36d9a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.59da3c1f.js",
-    "static/js/2.b4a1c37d.chunk.js",
-    "static/css/main.2c48dd14.chunk.css",
-    "static/js/main.0d440c8e.chunk.js"
+    "static/css/2.c589ddb6.chunk.css",
+    "static/js/2.6cd7546f.chunk.js",
+    "static/css/main.76bc5abb.chunk.css",
+    "static/js/main.58aaa015.chunk.js"
   ]
 }
