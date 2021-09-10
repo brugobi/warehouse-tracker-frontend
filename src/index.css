@@ -19,7 +19,7 @@ body {
 }
 
 nav {
-  height: 10vh;
+  height: 15vh;
 }
 
 main {
@@ -89,10 +89,10 @@ main {
 .nav-menu {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 40%;
   height: 20vh;
   position: absolute;
-  top: 80px;
+  top: 50px;
   left: -100%;
   opacity: 1;
   transition: all 0.5s ease;
@@ -107,9 +107,9 @@ main {
 }
 
 footer {
-  height: 10vh;
+  height: 15vh;
   padding: 20px;
-  background-color: chartreuse;
+  background-color: rgb(76, 190, 124);
   position: fixed;
   bottom: 0;
   display: flex;

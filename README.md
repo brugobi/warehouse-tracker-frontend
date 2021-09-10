@@ -1,74 +1,105 @@
-# Getting Started with Create React App
+# WHAREHOUSE
+ 
+> I have developed this Front-End application using the [warehouse-tracker-backend](https://github.com/brugobi/warehouse-tracker-backend/tree/backup). The app can help to keep track the quantity of material stored. The main features of this app are:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Login with username and password
+- Access list of materials
+- Record the total quantity of material stored
+- Record the total quantity of material needed or extra materials
 
-## Available Scripts
+### Pages
 
-In the project directory, you can run:
+![login](./src/img/login.png)
 
-### `npm start`
+![home](./src/img/home.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![form](./src/img/form.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![statistics](./src/img/statistics.png)
 
-### `npm test`
+## Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React & Redux
+- JavaScript(ES6)
+- gh-pages
+- Node.js
+- Bulma
+- prop-types
+- Jest
+- Enzyme
+- warehouse-tracker-backend API: [API](https://github.com/brugobi/warehouse-tracker-backend/tree/backup)
 
-### `npm run build`
+## Live Version
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can click on this [link]( https://brugobi.github.io/warehouse-tracker-frontend/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+- Node.js
+- Any Brownse
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To get started open the directory where you will save this repo by typing on your terminal:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+$ cd <directory>
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Clone the repo typing:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+$ git clone git@github.com:brugobi/warehouse-tracker-frontend.git
+```
+- Install dependencies:
 
-## Learn More
+```
+$ npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- After set up the environment, run:
 
-### Code Splitting
+```
+$ npm start
+```
+- Open in the Browser:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+http://localhost:3000
+```
 
-### Analyzing the Bundle Size
+### Test
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- To run the tests:
 
-### Making a Progressive Web App
+```
+$ npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Author
 
-### Advanced Configuration
+👤 **Bruna Gobi**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Github: [@brugobi](https://github.com/brugobi)
+- Twitter: [@BrunaGobi2](https://twitter.com/BrunaGobi2)
+- Linkedin: [bruna-gobi](https://www.linkedin.com/in/bruna-gobi/)
 
-### Deployment
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions, issues and feature requests are welcome!
 
-### `npm run build` fails to minify
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!
+Feel free to check the [issues page](issues/).
 
-# image
+## Acknowledgments
 
-Imagem de THAM YUAN YUAN por Pixabay
+- Project requested by [Microverse Program](https://www.microverse.org/).
+- The image was taken from THAM YUAN YUAN by [Pixabay](https://pixabay.com/pt/).
+
+## 📝 License
+
+This project is [MIT](lic.url) licensed.

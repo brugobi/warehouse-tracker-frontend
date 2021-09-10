@@ -59,7 +59,7 @@ function Nav() {
 
       {username
         ? (
-          <div className="navbar-end">
+          <div className="navbar-end is-hidden-mobile">
             <div className="navbar-item">
               <Link onClick={handleLogout} to="/">LOGOUT</Link>
             </div>
