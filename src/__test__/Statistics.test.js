@@ -4,23 +4,27 @@ import {
 } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
-import Signup from '../Components/Signup';
+import Statistics from '../Components/Statistics';
 import store from '../Reducers/index';
 
-describe('<Signup />', () => {
+describe('<Statistics />', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Router><Provider store={store}><Signup /></Provider></Router>);
+    wrapper = shallow(<Router><Provider store={store}><Statistics /></Provider></Router>);
   });
 
   it('renders three <Nav /> components', () => {
     expect(wrapper.find('Nav')).toBeTruthy();
   });
 
+  it('renders three <Footer /> components', () => {
+    expect(wrapper.find('Footer')).toBeTruthy();
+  });
+
   it('matches the snapshot', () => {
     const tree = renderer.create(
-      <Router><Provider store={store}><Signup /></Provider></Router>,
+      <Router><Provider store={store}><Statistics /></Provider></Router>,
     );
     expect(tree).toMatchSnapshot();
   });
