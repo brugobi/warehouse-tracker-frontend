@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Items component Matches the snapshot 1`] = `[Function]`;
+
+exports[`RegisterContainer component Matches the snapshot 1`] = `[Function]`;

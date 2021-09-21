@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Statistics /> matches the snapshot 1`] = `
+<div
+  className="App"
+>
+  <nav
+    aria-label="main navigation"
+    className="navbar is-dark"
+    role="navigation"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <div
+        className="navbar-item"
+      >
+        <div
+          className="navbar-item"
+        >
+          <svg
+            fill="currentColor"
+            height="40px"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": "#4c79f2",
+              }
+            }
+            viewBox="0 0 576 512"
+            width="40px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M560 288h-80v96l-32-21.3-32 21.3v-96h-80c-8.8 0-16 7.2-16 16v192c0 8.8 7.2 16 16 16h224c8.8 0 16-7.2 16-16V304c0-8.8-7.2-16-16-16zm-384-64h224c8.8 0 16-7.2 16-16V16c0-8.8-7.2-16-16-16h-80v96l-32-21.3L256 96V0h-80c-8.8 0-16 7.2-16 16v192c0 8.8 7.2 16 16 16zm64 64h-80v96l-32-21.3L96 384v-96H16c-8.8 0-16 7.2-16 16v192c0 8.8 7.2 16 16 16h224c8.8 0 16-7.2 16-16V304c0-8.8-7.2-16-16-16z"
+            />
+          </svg>
+        </div>
+        <div
+          className="navbar-item brand-name is-white"
+        >
+          WAREHOUSE
+        </div>
+      </div>
+      <div
+        className="navbar-burger navbar-end"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 512 512"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M32 96v64h448V96H32zm0 128v64h448v-64H32zm0 128v64h448v-64H32z"
+          />
+        </svg>
+      </div>
+      <div
+        className="nav-menu"
+      >
+        <div
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <a
+            href="/Login"
+            onClick={[Function]}
+          >
+            Login
+          </a>
+        </div>
+        <div
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <a
+            href="/Signup"
+            onClick={[Function]}
+          >
+            Signup
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="navbar-menu"
+    >
+      <div
+        className="navbar-end"
+      >
+        <div
+          className="navbar-item"
+        >
+          <a
+            href="/Login"
+            onClick={[Function]}
+          >
+            Login
+          </a>
+        </div>
+        <div
+          className="navbar-item"
+        >
+          <a
+            href="/Signup"
+            onClick={[Function]}
+          >
+            Signup
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <span>
+    Hey  
+  </span>
+  <ul>
+    <h2>
+      No items
+    </h2>
+  </ul>
+  <footer>
+    <div
+      className="fixed-bottom"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="columns is-mobile is-flex"
+        >
+          <div
+            className="column"
+          >
+            <a
+              href="/CreateItem"
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12,22 C17.5228475,22 22,17.5228475 22,12 C22,6.4771525 17.5228475,2 12,2 C6.4771525,2 2,6.4771525 2,12 C2,17.5228475 6.4771525,22 12,22 Z M12,18 L12,6 M6,12 L18,12"
+                  fill="none"
+                  stroke="#000"
+                  strokeWidth="2"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            className="column"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"
+                />
+              </svg>
+            </a>
+          </div>
+          <div
+            className="column"
+          >
+            <a
+              href="/Statistics"
+              onClick={[Function]}
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h1v16H0V0zm1 15h15v1H1v-1z"
+                />
+                <path
+                  clipRule="evenodd"
+                  d="M14.39 4.312L10.041 9.75 7 6.707l-3.646 3.647-.708-.708L7 5.293 9.959 8.25l3.65-4.563.781.624z"
+                  fillRule="evenodd"
+                />
+                <path
+                  clipRule="evenodd"
+                  d="M10 3.5a.5.5 0 01.5-.5h4a.5.5 0 01.5.5v4a.5.5 0 01-1 0V4h-3.5a.5.5 0 01-.5-.5z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+`;
