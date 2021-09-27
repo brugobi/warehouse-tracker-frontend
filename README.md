@@ -1,4 +1,4 @@
-# WHAREHOUSE
+# WHAREHOUSE Tracking
  
 > I have developed this Front-End application using the [warehouse-tracker-backend](https://github.com/brugobi/warehouse-tracker-backend/tree/backup). The app can help to keep track the quantity of material stored. The main features of this app are:
 
