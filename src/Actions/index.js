@@ -49,7 +49,6 @@ export const fetchItems = () => (dispatch) => {
   axios.get(`${API}items`)
     .then((response) => {
       const items = response.data;
-      console.log(items);
       dispatch(fetchItemsSuccess(items));
     })
     .catch((error) => {
