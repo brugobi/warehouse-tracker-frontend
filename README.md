@@ -28,10 +28,11 @@
 - Jest
 - Enzyme
 - warehouse-tracker-backend API: [API](https://github.com/brugobi/warehouse-tracker-backend/tree/backup)
+- Heroku
 
 ## Live Version
 
-You can click on this [link]( https://brugobi.github.io/warehouse-tracker-frontend/)
+You can click on this [link](https://warehouse-front-bru.herokuapp.com/Login)
 
 ## Getting Started
 
