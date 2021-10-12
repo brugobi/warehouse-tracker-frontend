@@ -59,7 +59,7 @@ export const fetchItems = () => (dispatch) => {
 };
 
 export const createUser = (username, password) => (dispatch) => {
-  fetch(`${API}register`, {
+  fetch(`${API}users`, {
     method: 'post',
     body: JSON.stringify({ username, password }),
     headers: { 'Content-type': 'application/json; charset=UTF-8' },
