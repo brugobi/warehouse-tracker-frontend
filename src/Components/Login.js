@@ -12,7 +12,7 @@ function Login({ error }) {
   const dispatch = useDispatch();
   const history = useHistory();
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState(0);
+  const [password, setPassword] = useState('');
 
   const handleChange = (e) => {
     const target = e.target.name;
