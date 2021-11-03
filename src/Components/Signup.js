@@ -11,18 +11,8 @@ function Signup() {
   const history = useHistory();
   const dispatch = useDispatch();
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState(0);
+  const [password, setPassword] = useState('');
 
-  const handleChange = (e) => {
-    const target = e.target.name;
-    const val = e.target.value;
-    if (target === 'username') {
-      setUsername(val);
-    }
-    if (target === 'password') {
-      setPassword(val);
-    }
-  };
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createUser(username, password));
@@ -50,7 +40,14 @@ function Signup() {
               <div className="field">
                 <label htmlFor="name">
                   <div className="control has-icons-left has-icons-right">
-                    <input onChange={(e) => handleChange(e)} placeholder="username" className="input" type="text" name="username" required />
+                    <input
+                      onChange={(e) => setUsername(e.target.value)}
+                      placeholder="username"
+                      className="input"
+                      type="text"
+                      name="username"
+                      required
+                    />
                     <span className="icon is-small is-left">
                       <FaUser />
                     </span>
@@ -60,7 +57,14 @@ function Signup() {
               <div className="field">
                 <label htmlFor="password">
                   <div className="control has-icons-left has-icons-right">
-                    <input onChange={(e) => handleChange(e)} placeholder="password" className="input" type="password" name="password" required />
+                    <input
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="password"
+                      className="input"
+                      type="password"
+                      name="password"
+                      required
+                    />
                     <span className="icon is-small is-left">
                       <BiLock />
                     </span>

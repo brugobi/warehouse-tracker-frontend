@@ -49,7 +49,6 @@ export const fetchItems = () => (dispatch) => {
   axios.get(`${API}items`)
     .then((response) => {
       const items = response.data;
-      console.log(items);
       dispatch(fetchItemsSuccess(items));
     })
     .catch((error) => {
@@ -59,7 +58,7 @@ export const fetchItems = () => (dispatch) => {
 };
 
 export const createUser = (username, password) => (dispatch) => {
-  fetch(`${API}register`, {
+  fetch(`${API}users`, {
     method: 'post',
     body: JSON.stringify({ username, password }),
     headers: { 'Content-type': 'application/json; charset=UTF-8' },
@@ -77,7 +76,7 @@ export const createUser = (username, password) => (dispatch) => {
 };
 
 export const fetchUser = (username, password) => (dispatch) => {
-  fetch(`${API}authenticate`, {
+  fetch(`${API}authentication`, {
     method: 'post',
     body: JSON.stringify({ username, password }),
     headers: { 'Content-type': 'application/json; charset=UTF-8' },

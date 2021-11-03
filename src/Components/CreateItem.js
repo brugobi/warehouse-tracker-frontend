@@ -17,23 +17,23 @@ function CreateItem({ currentUser }) {
   };
   const [errors, setErrors] = useState(errorsObj);
 
-  const handleChange = (e) => {
-    const target = e.target.name;
-    const val = e.target.value;
+  // const handleChange = (e) => {
+  //   const target = e.target.name;
+  //   const val = e.target.value;
 
-    if (target === 'code') {
-      setCode(val);
-    }
-    if (target === 'name') {
-      setName(val);
-    }
-    if (target === 'idealQuantity') {
-      setIdealQuantity(val);
-    }
-    if (target === 'currentQuantity') {
-      setCurrentQuantity(val);
-    }
-  };
+  //   // if (target === 'code') {
+  //   //   setCode(val);
+  //   // }
+  //   // if (target === 'name') {
+  //   //   setName(val);
+  //   // }
+  //   if (target === 'idealQuantity') {
+  //     setIdealQuantity(val);
+  //   }
+  //   if (target === 'currentQuantity') {
+  //     setCurrentQuantity(val);
+  //   }
+  // };
 
   toast.configure();
 
@@ -84,7 +84,14 @@ function CreateItem({ currentUser }) {
                       <p className="control">
                         <label htmlFor="code" className="label">
                           Code
-                          <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="text" name="code" id="code" required />
+                          <input
+                            className="input is-info is-medium"
+                            onChange={(e) => setCode(e.target.value)}
+                            type="text"
+                            name="code"
+                            id="code"
+                            required
+                          />
                         </label>
                       </p>
                     </div>
@@ -93,7 +100,14 @@ function CreateItem({ currentUser }) {
                       <p className="control">
                         <label htmlFor="name" className="label">
                           Name
-                          <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="name" name="name" id="name" required />
+                          <input
+                            className="input is-info is-medium"
+                            onChange={(e) => setName(e.target.value)}
+                            type="name"
+                            name="name"
+                            id="name"
+                            required
+                          />
                         </label>
                       </p>
                     </div>
@@ -106,7 +120,14 @@ function CreateItem({ currentUser }) {
                       <p className="control">
                         <label htmlFor="idealQuantity" className="label">
                           Ideal Quantity
-                          <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="number" name="idealQuantity" id="idealQuantity" required />
+                          <input
+                            className="input is-info is-medium"
+                            onChange={(e) => setIdealQuantity(e.target.value)}
+                            type="number"
+                            name="idealQuantity"
+                            id="idealQuantity"
+                            required
+                          />
                         </label>
                       </p>
                     </div>
@@ -115,7 +136,14 @@ function CreateItem({ currentUser }) {
                       <p className="control">
                         <label htmlFor="currentQuantity" className="label">
                           Current Quantity
-                          <input className="input is-info is-medium" onChange={(e) => handleChange(e)} type="number" name="currentQuantity" id="currentQuantity" required />
+                          <input
+                            className="input is-info is-medium"
+                            onChange={(e) => setCurrentQuantity(e.target.value)}
+                            type="number"
+                            name="currentQuantity"
+                            id="currentQuantity"
+                            required
+                          />
                         </label>
                       </p>
                     </div>
